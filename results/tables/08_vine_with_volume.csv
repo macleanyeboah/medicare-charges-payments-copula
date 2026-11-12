@@ -1,0 +1,4 @@
+tree,pair,family,kendall_tau
+1,"volume, charges",clayton,0.17346868345601302
+1,"payments, charges",gaussian,0.2189594070743817
+2,"volume, payments | charges",clayton (survival),0.016712454576886686

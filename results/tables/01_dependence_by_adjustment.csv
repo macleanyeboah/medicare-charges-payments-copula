@@ -1,0 +1,6 @@
+level,n,kendall_tau,spearman_rho
+1. Raw rows: log charges vs log payments,159735,0.5365734564798913,0.7301837517374064
+2. Rows after removing DRG means,159735,0.23113151550808453,0.3408455014898223
+3. Hospital indices (DRG-adjusted),2879,0.22189992905902922,0.3292780339132759
+"4. Hospital indices, within state",2879,0.14738270300305512,0.2186907673669603
+Sensitivity: Medicare-only payments (level 3),2879,0.18004741145111336,0.26998311279839643

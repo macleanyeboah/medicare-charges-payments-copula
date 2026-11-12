@@ -1,0 +1,233 @@
+{
+  "n_raw_rows": 163065,
+  "n_drgs": 100,
+  "n_hospitals_all": 3337,
+  "n_hospitals_analysed": 2879,
+  "dependence": [
+    {
+      "level": "1. Raw rows: log charges vs log payments",
+      "n": 159735,
+      "kendall_tau": 0.5365734564798913,
+      "spearman_rho": 0.7301837517374064
+    },
+    {
+      "level": "2. Rows after removing DRG means",
+      "n": 159735,
+      "kendall_tau": 0.23113151550808453,
+      "spearman_rho": 0.3408455014898223
+    },
+    {
+      "level": "3. Hospital indices (DRG-adjusted)",
+      "n": 2879,
+      "kendall_tau": 0.22189992905902922,
+      "spearman_rho": 0.3292780339132759
+    },
+    {
+      "level": "4. Hospital indices, within state",
+      "n": 2879,
+      "kendall_tau": 0.14738270300305512,
+      "spearman_rho": 0.2186907673669603
+    },
+    {
+      "level": "Sensitivity: Medicare-only payments (level 3)",
+      "n": 2879,
+      "kendall_tau": 0.18004741145111336,
+      "spearman_rho": 0.26998311279839643
+    }
+  ],
+  "best_copula_national": "gaussian",
+  "best_copula_within_state": "gaussian",
+  "tail_dependent_alternative": "bb1 (survival)",
+  "tail_asymmetry": [
+    {
+      "q": 0.9,
+      "chi_upper": 0.257033692254255,
+      "chi_lower": 0.18409169850642587,
+      "difference": 0.07294199374782911,
+      "ci95_low": 0.006946856547412311,
+      "ci95_high": 0.1354637026745398,
+      "share_boot_diff_le_0": 0.019
+    },
+    {
+      "q": 0.95,
+      "chi_upper": 0.2084056964223687,
+      "chi_lower": 0.08336227856894747,
+      "difference": 0.1250434178534212,
+      "ci95_low": 0.041681139284473756,
+      "ci95_high": 0.19468565474122929,
+      "share_boot_diff_le_0": 0.001
+    }
+  ],
+  "top5_national": [
+    {
+      "copula": "gaussian",
+      "AIC": -342.65676550742523,
+      "delta_AIC": 0.0,
+      "kendall_tau": 0.21895940707427497,
+      "lambda_lower": 0.0,
+      "lambda_upper": 0.0
+    },
+    {
+      "copula": "bb1 (survival)",
+      "AIC": -341.7726299111153,
+      "delta_AIC": 0.8841355963099318,
+      "kendall_tau": 0.1999114314060122,
+      "lambda_lower": 0.0701522430379109,
+      "lambda_upper": 0.16994287460455185
+    },
+    {
+      "copula": "student",
+      "AIC": -338.69910744602,
+      "delta_AIC": 3.9576580614052546,
+      "kendall_tau": 0.21891081426461775,
+      "lambda_lower": 6.483399179396563e-06,
+      "lambda_upper": 6.483399179396563e-06
+    },
+    {
+      "copula": "bb7 (survival)",
+      "AIC": -337.5597547419177,
+      "delta_AIC": 5.097010765507548,
+      "kendall_tau": 0.19379925859252034,
+      "lambda_lower": 0.06645831444654604,
+      "lambda_upper": 0.19468563544686251
+    },
+    {
+      "copula": "gumbel",
+      "AIC": -334.6730205309324,
+      "delta_AIC": 7.983744976492858,
+      "kendall_tau": 0.2030614116200579,
+      "lambda_lower": 0.0,
+      "lambda_upper": 0.2625895881279514
+    }
+  ],
+  "top5_within_state": [
+    {
+      "copula": "gaussian",
+      "AIC": -164.18807361426718,
+      "delta_AIC": 0.0,
+      "kendall_tau": 0.15289465088812534,
+      "lambda_lower": 0.0,
+      "lambda_upper": 0.0
+    },
+    {
+      "copula": "student",
+      "AIC": -162.4626925106078,
+      "delta_AIC": 1.7253811036593731,
+      "kendall_tau": 0.15237950668087955,
+      "lambda_lower": 8.373486461926092e-07,
+      "lambda_upper": 8.373486461926092e-07
+    },
+    {
+      "copula": "bb1",
+      "AIC": -161.40147656673506,
+      "delta_AIC": 2.7865970475321262,
+      "kendall_tau": 0.1431048934934942,
+      "lambda_lower": 0.013010911330442926,
+      "lambda_upper": 0.10813769578317256
+    },
+    {
+      "copula": "bb7",
+      "AIC": -158.6063899136562,
+      "delta_AIC": 5.581683700610995,
+      "kendall_tau": 0.13790912471993577,
+      "lambda_lower": 0.0321749371790405,
+      "lambda_upper": 0.1263606746979844
+    },
+    {
+      "copula": "bb1 (survival)",
+      "AIC": -153.78043235740304,
+      "delta_AIC": 10.407641256864139,
+      "kendall_tau": 0.1419417919511845,
+      "lambda_lower": 0.12094142861667923,
+      "lambda_upper": 0.005466928390183397
+    }
+  ],
+  "bootstrap": {
+    "gaussian": {
+      "kendall_tau": {
+        "estimate": 0.21895940707427497,
+        "ci95": [
+          0.19854649768499236,
+          0.2386395185932069
+        ]
+      },
+      "lambda_lower": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "lambda_upper": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "bb1 (survival)": {
+      "kendall_tau": {
+        "estimate": 0.1999114314060122,
+        "ci95": [
+          0.17945836008842134,
+          0.22018886758860845
+        ]
+      },
+      "lambda_lower": {
+        "estimate": 0.0701522430379109,
+        "ci95": [
+          0.029423298949327777,
+          0.11112729152334502
+        ]
+      },
+      "lambda_upper": {
+        "estimate": 0.16994287460455185,
+        "ci95": [
+          0.11738034590041221,
+          0.22149084537865396
+        ]
+      }
+    }
+  },
+  "joint_extremes": [
+    {
+      "threshold": "top 10% in both",
+      "empirical": 0.025703369225425494,
+      "independence": 0.009999999999999995,
+      "gaussian": 0.023414140779211,
+      "bb1 (survival)": 0.03155096950406466,
+      "student": 0.023948519362690934
+    },
+    {
+      "threshold": "top 5% in both",
+      "empirical": 0.010420284821118444,
+      "independence": 0.0025000000000000044,
+      "gaussian": 0.007937355785777256,
+      "bb1 (survival)": 0.013534045712147225,
+      "student": 0.008336242972413976
+    }
+  ],
+  "maryland_median_ratio": 1.0633102392526097,
+  "national_median_ratio_excl_md": 3.398792020680122,
+  "vine": [
+    {
+      "tree": 1,
+      "pair": "volume, charges",
+      "family": "clayton",
+      "kendall_tau": 0.17346868345601302
+    },
+    {
+      "tree": 1,
+      "pair": "payments, charges",
+      "family": "gaussian",
+      "kendall_tau": 0.2189594070743817
+    },
+    {
+      "tree": 2,
+      "pair": "volume, payments | charges",
+      "family": "clayton (survival)",
+      "kendall_tau": 0.016712454576886686
+    }
+  ]
+}
